@@ -1,0 +1,11 @@
+<div>
+    <h2>{{ candidatoInfo.nombreCompleto }}</h2>
+    <p>Telefono: {{ candidatoInfo.telefono }}</p>
+    <p>Ciudad: {{ candidatoInfo.ciudadRecidencia }}</p>
+    <p>Correo: {{ candidatoInfo.email }}</p>
+    <p>Descripción de habilidades: {{ candidatoInfo.descripcionHabilidades }}</p>
+    <p>Experiencia: {{ candidatoInfo.experiencia }}</p>
+    <a href="{{ candidatoInfo.urlLinkedIn }}" target="_blank">{{ candidatoInfo.urlLinkedIn }}</a>
+    <button mat-button (click)="editar()">Editar</button>
+    <button mat-button (click)="eliminar()">Eliminar</button>
+</div>

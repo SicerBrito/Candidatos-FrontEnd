@@ -1,0 +1,15 @@
+section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 24;
+    padding: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}

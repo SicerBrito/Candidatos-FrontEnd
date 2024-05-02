@@ -1,0 +1,10 @@
+@if(candidatos$ | async; as resultObject){
+  <ul class="candidato-list">
+    @for (item of resultObject; track item.nombreCompleto) {
+      <li>
+        <app-candidato-item [candidatoInfo]="item" />
+      </li>
+    }
+
+  </ul>
+}

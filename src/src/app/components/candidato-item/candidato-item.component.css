@@ -1,0 +1,70 @@
+section {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.card {
+    width: 18rem;
+    border: transparent;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all .3s linear;
+}
+
+.card:hover {
+    transform: translateY(-13px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.avatar-container {
+    text-align: center;
+}
+
+.avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+.list-group-item {
+    font-size: 14px;
+}
+
+.card-link {
+    font-size: 14px;
+}
+
+  /* Estilos específicos para géneros */
+.avatar-container img[src*='Masculino'] {
+    border: 2px solid blue;
+}
+
+.avatar-container img[src*='Femenino'] {
+    border: 2px solid pink;
+}
+
+.avatar-container img[src*='Otro'] {
+    border: 2px solid grey;
+}
