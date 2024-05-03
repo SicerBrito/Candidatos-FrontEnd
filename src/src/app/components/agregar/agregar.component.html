@@ -1,0 +1,73 @@
+<mat-card>
+    <mat-card-content>
+        <button mat-flat-button color="primary" padding="10px" (click)="nuevo()">Agregar un Nuevo Candidato</button>
+
+    
+    <table mat-table [dataSource]="listaCandidato" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+        <ng-container matColumnDef="nombreCompleto">
+          <th mat-header-cell *matHeaderCellDef> Nombre Completo </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreCompleto}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fechaNacimiento">
+          <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
+          <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="genero">
+          <th mat-header-cell *matHeaderCellDef> Genero </th>
+          <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="telefono">
+          <th mat-header-cell *matHeaderCellDef> Telefono </th>
+          <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ciudadRecidencia">
+            <th mat-header-cell *matHeaderCellDef> Ciudad de Recidencia </th>
+            <td mat-cell *matCellDef="let element"> {{element.ciudadRecidencia}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="descripcionHabilidades">
+            <th mat-header-cell *matHeaderCellDef> Descripcion de Habilidades </th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcionHabilidades}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="experiencia">
+            <th mat-header-cell *matHeaderCellDef> Experiencia </th>
+            <td mat-cell *matCellDef="let element"> {{element.experiencia}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="urlLinkedIn">
+            <th mat-header-cell *matHeaderCellDef> Url de LinkedIn </th>
+            <td mat-cell *matCellDef="let element"> {{element.urlLinkedIn}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="accion">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button color="primary" (click)="editar(candidatoInfo)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="eliminar(candidatoInfo)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    </mat-card-content>
+</mat-card>

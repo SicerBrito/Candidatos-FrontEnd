@@ -1,4 +1,5 @@
 <!-- <div *ngIf="candidatoInfo" class="candidato-card"></div> Simplemente hace desaparecer el problema y acepta valores o maneja un objeto undefined--> 
+
 <div class="card"> 
     <div class="avatar-container"> 
       <img *ngIf="candidatoInfo.genero === 'Masculino'" src="https://github.com/SicerBrito/DiaEspecial/raw/main/avatarMasculino.png" class="avatar-img" alt="Imagen Masculino"> 
@@ -17,16 +18,18 @@
     <div class="card-body"> 
       <p class="card-link">{{ candidatoInfo.descripcionHabilidades }}</p> 
       <p class="card-link">{{ candidatoInfo.experiencia }}</p> 
-      <a href="{{ candidatoInfo.urlLinkedIn }}" target="_blank" class="card-link">{{ candidatoInfo.urlLinkedIn }}</a> 
-    </div>
-</div> 
+      <a href="{{ candidatoInfo.urlLinkedIn }}" target="_blank" class="card-link">{{ candidatoInfo.urlLinkedIn }}</a>
+      <div>
+        <button mat-icon-button color="primary" (click)="editar(candidatoInfo)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="eliminar(candidatoInfo)">
+            <mat-icon>delete</mat-icon>
+        </button>
 
-<div>
-  <ul>
-    <li *ngFor="let candidato of candidatos">
-      {{ candidato.nombreCompleto }}
-    </li>
-  </ul>  
-</div>
+      </div>
+    </div>
+  
+</div> 
 
 

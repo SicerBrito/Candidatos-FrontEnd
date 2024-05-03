@@ -1,9 +1,16 @@
 <div class="cuerpo">
     <article>
-        <section>
-            <h1>Candidatos Postulados</h1>
+        <section style="align-items: center;" class="tooltip-container">
+                <span class="text">Estos son nuestros andidatos Postulados 👆</span>
+                <span>Se bienvenido! 👋</span>
+
         </section>
-            
+        
+        <section>
+            <button mat-flat-button color="primary" padding="10px" (click)="nuevo()">Agregar un Nuevo Candidato</button>
+            <!-- <app-agregar />      -->
+        </section>
+
         <section>
             <app-candidato-list />
         </section>
